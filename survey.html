@@ -1,0 +1,135 @@
+<!DOCTYPE html
+	PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+	
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<title>Anime Surveys</title>
+<script src="survey.js"></script>
+<link rel="stylesheet" type="text/css" href="survey.css" >
+<style>
+a:link		{color: white}
+		
+a:hover	{color: white}
+		
+a:visited	{color: white}
+
+a:active	{color: #1631a3}
+
+p	{font-family:"Comic Sans MS";
+	font-variant:small-caps;
+	font-size:large;
+	color:#ffd1f0}
+	
+body	{background-color:black;
+		line-height: 40px}
+	
+legend	{color:#ffd1f0}
+
+</style>
+</head>
+
+<body>
+<a name="top"></a>
+<div>
+<img style="float:right;margin-top:20px" src="Menubar.jpg" width="960" height="114" alt="MenuBar" usemap="menu"/>
+</div>
+<br />
+<h1 style="text-align:center;margin-left:auto" class="home">Welcome to KissAnime!</h1>
+<br />
+
+<form onSubmit="return checksubmit(this);" action="surveyinsert.php" method="post">
+<fieldset style="line-height:20px">
+<legend style="font-style:italic;font-size:x-large">Choose your favorite 5 (or more) anime!</legend>
+
+<p><br /><input name="anime" type="checkbox" value="Steinsgate" onChange="countChecks(this);" />Steins Gate</p>
+<p><br /><input name="anime" type="checkbox" value="Fullmetal Alchemist Brotherhood" onChange="countChecks(this);"/>Fullmetal Alchemist Brotherhood</p>
+<p><br /><input name="anime" type="checkbox" value="Elfen Lied" onChange="countChecks(this);" />Elfen Lied</p>
+<p><br /><input name="anime" type="checkbox" value="Angel Beats" onChange="countChecks(this);"/>Angel Beats</p>
+<p><br /><input name="anime" type="checkbox" value="Your Lie in April" onChange="countChecks(this);"/>Your Lie in April</p>
+
+<p><br /><input name="anime" type="checkbox" value="No Game No Life" onChange="countChecks(this);"/>No Game No Life</p>
+<p><br /><input name="anime" type="checkbox" value="Tokyo Ghoul" onChange="countChecks(this);"/>Tokyo Ghoul</p>
+<p><br /><input name="anime" type="checkbox" value="Sei No Kakuritsu (Parasyte)" onChange="countChecks(this);"/>Sei No Kakuritsu (Parasyte)</p>
+<p><br /><input name="anime" type="checkbox" value="Bleach" onChange="countChecks(this);"/>Bleach</p>
+<p><br /><input name="anime" type="checkbox" value="Attack on Titan" onChange="countChecks(this);"/>Attack on Titan</p>
+
+<p><br /><input name="anime" type="checkbox" value="Code Geass" onChange="countChecks(this);"/>Code Geass</p>
+<p><br /><input name="anime" type="checkbox" value="Ouran High School Host Club" onChange="countChecks(this);"/>Ouran High School Host Club</p>
+<p><br /><input name="anime" type="checkbox" value="Akame Ga Kill" onChange="countChecks(this);"/>Akame Ga Kill</p>
+<p><br /><input name="anime" type="checkbox" value="Soul Eater" onChange="countChecks(this);"/>Soul Eater</p>
+<p><br /><input name="anime" type="checkbox" value="Black Butler" onChange="countChecks(this);"/>Black Butler</p>
+
+<p><br /><input name="anime" type="checkbox" value="Mirai Nikki (Future Diary)" onChange="countChecks(this);"/>Mirai Nikki (Future Diary)</p>
+<p><br /><input name="anime" type="checkbox" value="Deadman Wonderland" onChange="countChecks(this);"/>Deadman Wonderland</p>
+<p><br /><input name="anime" type="checkbox" value="Psycho Pass" onChange="countChecks(this);"/>Psycho Pass</p>
+<p><br /><input name="anime" type="checkbox" value="Danganronpa" onChange="countChecks(this);"/>Danganronpa</p>
+<p><br /><input name="anime" type="checkbox" value="Assassination Classroom" onChange="countChecks(this);"/>Assassination Classroom</p>
+
+<p><br /><input name="anime" type="checkbox" value="Anohana" onChange="countChecks(this);"/>Anohana</p>
+<p><br /><input name="anime" type="checkbox" value="Clannad" onChange="countChecks(this);"/>Clannad</p>
+<p><br /><input name="anime" type="checkbox" value="One Punch Man" onChange="countChecks(this);"/>One Punch Man</p>
+<p><br /><input name="anime" type="checkbox" value="Death Note" onChange="countChecks(this);"/>Death Note</p>
+<p><br /><input name="anime" type="checkbox" value="Re:Zero" onChange="countChecks(this);"/>Re:Zero</p>
+
+<p><br /><input name="anime" type="checkbox" value="Mob Psycho 100" onChange="countChecks(this);"/>Mob Psycho 100</p>
+<p><br /><input name="anime" type="checkbox" value="Ghost" onChange="countChecks(this);"/>Ghost in the Shell</p>
+<p style="font-style:italic"><br /><input name="anime" type="checkbox" value="Other" onChange="countChecks(this);"/>Other
+<textarea name="other" rows="1" cols="50"></textarea></p>
+</fieldset>
+
+<p><input type="submit" value="Submit" />
+<input type="reset" value="Reset" /></p>
+<p style="font-style:italic;font-variant:normal">Thanks for giving us your favorite animes!</p>
+</form>
+
+<table align="center" style="font-size:small">
+<tr>
+<td><a href="#top">Back to top</a></td>
+</tr>
+</table>
+<br clear="all"> </br>
+
+<form action="test.php" method="post">
+<fieldset>
+<legend style="font-style:italic;font-size:x-large">Tell us your favorites!</legend>
+
+Favorite Anime: <input type="text" name="fav_anime"><br>
+Favorite Genre: <input type="text" name="fav_genre"><br>
+Name: <input type="text" name="name"><br>
+Age: <input type="text" name="age"><br>
+Email: <input type="text" name="email"><br>
+
+</fieldset>
+
+<p><input type="submit" value="Submit" />
+<input type="reset" value="Reset" /></p>
+</form>
+
+<table align="center" style="font-size:small">
+<tr>
+<td><a href="#top">Back to top</a></td>
+</tr>
+</table>
+
+<table align="center" style="vertical-align:bottom" class="footer">
+<tr>
+<td><a href="kissanimefavorites.html">Our Favorite Anime</a>&nbsp; &raquo;
+&laquo; &nbsp;<a href="kissanimewhatisanime.html">What is Anime?</a>&nbsp; &raquo;
+&laquo; &nbsp;<a href="kissanimehome.html">Home</a>&nbsp; &raquo;
+&laquo; &nbsp;<a href="kissanimeabout.html">About</a></td>
+</tr>
+</table>
+
+<map name="menu" id="menu">
+	<area shape="rect" coords="12,102,188,13" href="kissanimehome.html" alt="Home" />
+	<area shape="rect" coords="202,101,371,12" href="kissanimefavorites.html" alt="Favorite" />
+	<area shape="rect" coords="385,101,547,12" href="kissanimewhatisanime.html" alt="Manga" />
+	<area shape="rect" coords="561,101,728,13"
+	href="kissanimesurveys.html" alt="What is Anime" />
+	<area shape="rect" coords="742,101,946,12" href="kissanimeabout.html" alt="Surveys" />
+</map>
+
+</body>
+</html>
